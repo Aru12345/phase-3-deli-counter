@@ -1,11 +1,15 @@
-# Write your code here.
-katz_deli = []
-
-def line(katz_deli)
-     if (katz_deli.empty?)
-       puts "The line is currently empty."
-     elsif (katz_deli.length>0)
-          puts "The line is currently "
+# Write your code here
+def line(deli)
+     if deli.empty?
+       puts  "The line is currently empty."
+     else 
+          current_line= "The line is currently:"
+          deli.each.with_index(1) do |person,i|
+               current_line << " #{i}. #{person}"
+          end
+          
+     
+     puts current_line
      end
 end
 
